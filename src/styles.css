@@ -56,7 +56,7 @@ h1 {
 .stats {
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(3, minmax(110px, 1fr));
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
 }
 
 .stat,
@@ -245,9 +245,15 @@ textarea {
   color: #3d6937;
 }
 
-.status.todo {
+.status.todo,
+.status.pending {
   background: #eadbd7;
   color: #783d34;
+}
+
+.status.scheduled {
+  background: #f4e8cd;
+  color: #7a5a1e;
 }
 
 .status.doing {
@@ -264,6 +270,145 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+.small {
+  min-height: 34px;
+  padding: 6px 12px;
+}
+
+.ghost.danger {
+  background: #f4e0dc;
+  color: #8a3b2d;
+}
+
+.hint {
+  color: #7a8277;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin: 12px 0 0;
+}
+
+.group {
+  margin-bottom: 18px;
+}
+
+.group-title {
+  align-items: center;
+  display: flex;
+  font-size: 1rem;
+  gap: 8px;
+  margin: 0 0 10px;
+}
+
+.group-count {
+  background: #e4e8df;
+  border-radius: 999px;
+  color: #5b6459;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 2px 9px;
+}
+
+.visit {
+  background: #f7f6f0;
+  border: 1px dashed #c9cfc2;
+  border-radius: 8px;
+  display: grid;
+  gap: 10px;
+  padding: 10px 12px;
+}
+
+.visit-info {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip.strong {
+  background: #e7ede2;
+  font-weight: 800;
+}
+
+.codebox {
+  align-items: center;
+  background: #fffdf5;
+  border: 1px solid #ddc99a;
+  border-radius: 6px;
+  color: #6f5b29;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 6px 10px;
+}
+
+.codebox strong {
+  font-size: 1.15rem;
+  letter-spacing: 2px;
+}
+
+.codebox em {
+  color: #8c8a7c;
+  font-size: 0.75rem;
+  font-style: normal;
+}
+
+.codebox.expired strong {
+  color: #9a9a9a;
+  text-decoration: line-through;
+}
+
+.codebox .warn {
+  color: #8a3b2d;
+  font-weight: 800;
+}
+
+.checkin {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.checkin input {
+  flex: 1;
+  letter-spacing: 3px;
+  min-height: 36px;
+  min-width: 180px;
+}
+
+.msg {
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.msg.ok {
+  color: #3d6937;
+}
+
+.msg.bad {
+  color: #8a3b2d;
+}
+
+.editor {
+  align-items: end;
+  background: #f1f4ee;
+  border-radius: 8px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr auto auto;
+  padding: 10px 12px;
+}
+
+.editor label {
+  min-width: 0;
+}
+
+.chip.archive {
+  background: #efece6;
+  color: #7d756a;
+  font-size: 0.75rem;
 }
 
 .empty {
@@ -289,7 +434,7 @@ textarea {
   }
 
   .stats {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .repair {
@@ -298,5 +443,9 @@ textarea {
 
   .content {
     padding: 14px;
+  }
+
+  .editor {
+    grid-template-columns: 1fr;
   }
 }
